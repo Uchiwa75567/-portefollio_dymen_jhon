@@ -5891,6 +5891,17 @@ input:focus-visible {
   width: 132px;
   height: auto;
 }
+.header-three-coach {
+  color: hsl(var(--heading-color));
+  font-family: var(--heading-font);
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+}
+.header-three-coach:hover {
+  color: var(--main-two-600);
+}
 .header-three-social {
   inset-inline-start: 50%;
   position: absolute;
