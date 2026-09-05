@@ -84,10 +84,6 @@ if ($("body").not(".is-mobile").hasClass("tw-magic-cursor")) {
     });
 
   // Show as the mouse moves//
-  $(document).mousemove(function () {
-    gsap.to("#magic-cursor", { duration: 0.3, autoAlpha: 1 });
-  });
-
   // Cursor view on hover (data attribute "data-cursor="...").
   $("[data-cursor]").each(function () {
     $(this)
@@ -95,7 +91,7 @@ if ($("body").not(".is-mobile").hasClass("tw-magic-cursor")) {
         $("#ball").addClass("with-blur");
         $ball.append('<div class="ball-view"></div>');
         $(".ball-view").append($(this).attr("data-cursor"));
-        gsap.to(ball, {
+        gsap.to($ball, {
           duration: 0.3,
           yPercent: -75,
           width: 140,
@@ -110,7 +106,7 @@ if ($("body").not(".is-mobile").hasClass("tw-magic-cursor")) {
         gsap.to(".ball-view", { duration: 0.3, scale: 1, autoAlpha: 1 });
       })
       .on("mouseleave", function () {
-        gsap.to(ball, {
+        gsap.to($ball, {
           duration: 0.3,
           yPercent: -50,
           width: $ballWidth,

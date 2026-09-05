@@ -114,7 +114,8 @@
   var slider = new Swiper(".testimonial-three-active", {
     slidesPerView: 2,
     spaceBetween: 10,
-    autoplay: true,
+    autoplay: false,
+    grabCursor: true,
     speed: 1500,
     loop: true,
     breakpoints: {
