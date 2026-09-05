@@ -8553,7 +8553,18 @@ body.tw-magic-cursor #magic-cursor {
   }
 }
 .about-three-counter .tw-btn-circle-icon {
-  font-size: 200px;
+  font-size: clamp(5rem, 10vw, 7.5rem);
+}
+.about-three-counter .tw-btn-circle > span {
+  align-items: center;
+  max-width: 72%;
+  position: relative;
+  z-index: 1;
+}
+.about-three-counter .tw-btn-circle > span > span:last-child {
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  line-height: 1.15;
+  max-width: 100%;
 }
 .about-three-counter .tw-btn-circle-dot {
   width: 63px;
@@ -8585,6 +8596,20 @@ body.tw-magic-cursor #magic-cursor {
   .about-three-counter {
     position: static !important;
     margin-block-start: 30px;
+  }
+  .about-three-counter .tw-btn-circle-icon {
+    font-size: 5.5rem;
+  }
+  .about-three-counter .tw-btn-circle > span > span:last-child {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .about-three-counter .tw-btn-circle-icon {
+    font-size: 4.5rem;
+  }
+  .about-three-counter .tw-btn-circle > span > span:last-child {
+    font-size: 0.95rem;
   }
 }
 
